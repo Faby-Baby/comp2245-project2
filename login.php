@@ -1,35 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+<?php
+if(isset($_POST["button_login"]))          
+    $user   = $_POST["name"];
+    $pass   = $_POST["password"];
 
-<link rel="stylesheet" href="style.css" type="text/css">
+    $sql_login      = "SELECT * FROM user WHERE username='$user' AND password='$pass'";
+    $result_login   = $conn->query($sql_login);
+    $row_login      = $result_login->fetch_assoc();
+    $numrow_login   = $result_login->num_rows;
 
-
-</head>
-<body>
-   <header> 
-    
-   <img src="./dolphin.png" alt="Dolphin Logo">
-    <h1>DOLPHIN CRM</h1>
-    </header>
-    <form action="" method="post">
-
-
-    <input type="text" name="Username" id="username" placeholder = "Email Address">
-    <input type="password" name="Password" id="password" placeholder = "Password">
-    <button type="submit">Login</button>
-
-    </form>
-
-
-
-
-
-
-
-</body>
-</html>
+    if($numrow_login==1)
+    {
+        session_start();
+        $_SESSION['user'] = $user;
+        header('Location:index.php?');
+    }
+}
+?>
