@@ -11,7 +11,11 @@
 
 </head>
 <body>
-   
+   <header> 
+    
+   <img src="./dolphin.png" alt="Dolphin Logo">
+    <h1>DOLPHIN CRM</h1>
+    </header>
     <form action="" method="post">
 
 
@@ -20,6 +24,9 @@
     <button type="submit">Login</button>
 
     </form>
+
+
+
 
 
 
