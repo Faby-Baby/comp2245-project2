@@ -14,5 +14,5 @@ if(isset($_POST["button_login"]))
         $_SESSION['user'] = $user;
         header('Location:index.php?');
     }
-}
-?>
+
+?>git 
