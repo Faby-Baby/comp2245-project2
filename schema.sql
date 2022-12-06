@@ -7,11 +7,11 @@ USE dolphin_crm;
 DROP TABLE IF EXISTS `Users`;
 CREATE TABLE `Users` (
     `id` int(11) NOT NULL auto_increment,
-    `firstname` VARCHAR(50) NOT NULL,
-    `lastname` VARCHAR(50) NOT NULL,
-    `password` VARCHAR()  NOT NULL,
-    `email` VARCHAR() NOT NULL,
-    `role` VARCHAR() NOT NULL,
+    `firstname` VARCHAR(50) NOT NULL default '',
+    `lastname` VARCHAR(50) NOT NULL  default '',
+    `password` VARCHAR(11)  NOT NULL  default '',
+    `email` VARCHAR(20) NOT NULL default '',
+    `role` VARCHAR(20) NOT NULL default '',
     `created_at` DATETIME NOT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
@@ -44,3 +44,7 @@ CREATE TABLE `Contacts` (
     `created_at` DATETIME NOT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO Users (email,password) VALUES ('admin@project2.com', HASHBYTES('SHA2_256','password123'));
+
+
