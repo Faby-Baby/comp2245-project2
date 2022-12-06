@@ -11,7 +11,7 @@
 <body>
     <aside>
         <ul>
-            <li> Home</li>
+            <li><a id="1"> Home</a></li>
             <li><a id="2"> New Contact</a></li>
             <li><a id="3"> Users</a></li>
             <li><a id="4"> Logout</a></li>
@@ -20,7 +20,7 @@
 
 <div class="Home">
     <h1>Dashboard</h1>
-    <button> Add Contacts</button>
+    <button id="2"> Add Contacts</button>
 
     
     <div>
@@ -38,9 +38,9 @@
 </div>
  
 <div class="Contacts">
-    <h1> New User </h1>
+    <h1> New Contact </h1>
     <div>
-         <form action=""> 
+       
             <select name="Title" id="Title">
                 <option value="Mr">Mr</option>
                 <option value="Mrs">Mrs</option> 
@@ -59,22 +59,23 @@
             <select name="AssignTo" id="Assignto">
                 <option value="Member"></option>
             </select>
-
+            <button id="Conbtn">Add Contact</button>
+            <div id="message"></div>
             
-         </form>
+       
     </div>
 </div>
 <div class="User">   
-    <h1>Users</h1><button id="New">New User</button>
+    <h1>Users</h1><button id="5">New User</button>
 <div id="UserTable">
 
 </div>
 
 </div>
-<div class="New User">
+<div class="New-User">
     <h1> New User </h1>
     <div>
-         <form action=""> 
+         
             <input type="text" name="First Name" id="firstname" placeholder="Jane">
             <input type="text" name="Last Name" id="lastname" placeholder="Doe">
             <input type="email" name="Email" id="emailaddress" placeholder="something@example.com">
@@ -82,9 +83,10 @@
             <select name="role" id="role">
                 <option value="Member"></option>
             </select>
-
+            <button id="Creabtn">Create User</button>
+            <div id="message"></div>
             
-         </form>
+        
     </div>
 </div>
 </body>
