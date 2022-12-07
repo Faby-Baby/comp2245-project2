@@ -34,12 +34,11 @@ CREATE TABLE `Contacts` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
 
 
-DROP TABLE IF EXISTS `Contacts`;
-CREATE TABLE `Contacts` (
+DROP TABLE IF EXISTS `Notes`;
+CREATE TABLE `Notes` (
     `id` int(11) NOT NULL auto_increment,
     `contact_id` int(11) NOT NULL,
     `comment` TEXT(100) NOT NULL,
-    `assigned_to` int(11) NOT NULL,
     `created_by` int(11) NOT NULL,
     `created_at` DATETIME NOT NULL,
     PRIMARY KEY (`id`)
